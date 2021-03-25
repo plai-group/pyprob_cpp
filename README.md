@@ -12,11 +12,11 @@ Please see the main [pyprob](https://github.com/probprog/pyprob) documentation f
 - XTL-Stack: https://github.com/QuantStack/xtl --branch 0.4.16
 - XTensor: https://github.com/QuantStack/xtensor.git --branch 0.17.4
 
+```bash
+git clone --branch <branchname> <repo>
 ```
-git clone --branch <branchname> <remote-repo>
-```
-### Install from source
 
+### Install from source
 Please see the provided [Dockerfile](https://github.com/probprog/pyprob_cpp/blob/master/Dockerfile) for more specific instructions on how to install the dependencies and configure the build environment.
 
 ```
