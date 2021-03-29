@@ -1,9 +1,13 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
-ENV CC=gcc-5
-ENV CXX=g++-5
+ENV CC=gcc-7
+ENV CXX=g++-7
+ENV TZ=America/Los_Angeles
 
-RUN apt-get update && apt-get install -y git cmake gcc-5 g++-5 libzmq3-dev
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN apt-get update
+RUN apt-get install -y tzdata
+RUN apt-get update && apt-get install -y git cmake gcc-7 g++-7 libzmq3-dev
 
 WORKDIR /home
 RUN git clone --branch v1.12.0 https://github.com/google/flatbuffers.git && cd flatbuffers && cmake -G "Unix Makefiles" && make install
