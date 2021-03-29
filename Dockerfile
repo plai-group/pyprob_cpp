@@ -1,9 +1,9 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
-ENV CC=gcc-5
-ENV CXX=g++-5
+ENV CC=gcc-7
+ENV CXX=g++-7
 
-RUN apt-get update && apt-get install -y git cmake gcc-5 g++-5 libzmq3-dev
+RUN apt-get update && apt-get install -y git cmake gcc-7 g++-7 libzmq3-dev
 
 WORKDIR /home
 RUN git clone --branch v1.12.0 https://github.com/google/flatbuffers.git && cd flatbuffers && cmake -G "Unix Makefiles" && make install
