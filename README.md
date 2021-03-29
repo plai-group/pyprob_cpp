@@ -8,12 +8,15 @@ Please see the main [pyprob](https://github.com/pyprob/pyprob) documentation for
 
 ### Dependencies
 - ZMQ: http://zeromq.org/
-- flatbuffers: https://github.com/google/flatbuffers/releases
-- xtensor: https://github.com/QuantStack/xtl
+- flatbuffers: https://github.com/google/flatbuffers/releases --branch v1.10.0
+- XTL-Stack: https://github.com/QuantStack/xtl --branch 0.4.16
+- XTensor: https://github.com/QuantStack/xtensor.git --branch 0.17.4
 
-### Install from source
+```bash
+git clone --branch <branchname> <repo>
+```
 
-Please see the provided [Dockerfile](https://github.com/pyprob/pyprob_cpp/blob/master/Dockerfile) for more specific instructions on how to install the dependencies and configure the build environment.
+Please see the provided [Dockerfile](Dockerfile) for more specific instructions on how to install the dependencies and configure the build environment.
 
 ```
 git clone git@github.com:pyprob/pyprob_cpp.git
@@ -29,7 +32,7 @@ https://hub.docker.com/r/pyprob/pyprob_cpp/
 
 ## Example models
 
-Several example models in C++ are provided in this repository, under the [src/pyprob_cpp/test](https://github.com/pyprob/pyprob_cpp/tree/master/src/pyprob_cpp/test) folder. 
+Several example models in C++ are provided in this repository, under the [src/pyprob_cpp/test](src/pyprob_cpp/test) folder. 
 
 These mirror the Python test cases in the main `pyprob` repository and are used as continuous integration tests ensuring that `pyprob` and `pyprob_cpp` work seamlessly together.
 
